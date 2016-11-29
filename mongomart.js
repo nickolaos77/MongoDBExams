@@ -68,7 +68,7 @@ MongoClient.connect(url, function(err, db) {
     // Homepage
     router.get("/", function(req, res) {
         "use strict";
-        
+        headparser(req)
         var page = req.query.page ? parseInt(req.query.page) : 0;
         var category = req.query.category ? req.query.category : "All";
 
