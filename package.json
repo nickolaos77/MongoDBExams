@@ -1,19 +1,20 @@
 {
-    "name": "mongomart",
-    "version": "0.1.0",
-    "description": "Ecommerce app Using the MongoDB driver and Express created for the exams of the lesson M101JS: MongoDB for Node.js Developers",
-    "main": "mongomart.js",
-    "scripts": {
+  "name": "mongomart",
+  "version": "0.1.0",
+  "description": "Ecommerce app Using the MongoDB driver and Express created for the exams of the lesson M101JS: MongoDB for Node.js Developers",
+  "main": "mongomart.js",
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node mongomart.js"
   },
-    "dependencies": {
-        "express": "~4.13.3",
-        "body-parser": "~1.15.0",
-        "mongodb": "~2.1.3",
-        "nunjucks": "~2.2.0",
-        "nunjucks-date": "~1.2.0"
-    },
-    "author": "Shannon Bradshaw",
-    "license": "0BSD"
+  "dependencies": {
+    "body-parser": "~1.15.0",
+    "express": "~4.13.3",
+    "mongodb": "~2.1.3",
+    "nunjucks": "~2.2.0",
+    "nunjucks-date": "~1.2.0",
+    "ua-parser-js": "^0.7.12"
+  },
+  "author": "Shannon Bradshaw",
+  "license": "0BSD"
 }
