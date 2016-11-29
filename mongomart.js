@@ -21,6 +21,7 @@ var express = require('express'),
     MongoClient = require('mongodb').MongoClient,
     assert = require('assert'),
     ItemDAO = require('./items').ItemDAO,
+    PORT      = process.env.PORT || 3000,
     CartDAO = require('./cart').CartDAO;
     
 
@@ -285,7 +286,7 @@ MongoClient.connect('mongodb://localhost:27017/mongomart', function(err, db) {
     app.use('/', router);
 
     // Start the server listening
-    var server = app.listen(3000, function() {
+    var server = app.listen(PORT, function() {
         var port = server.address().port;
         console.log('Mongomart server listening on port %s.', port);
     });

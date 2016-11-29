@@ -2,10 +2,10 @@
     "name": "mongomart",
     "version": "0.1.0",
     "description": "Ecommerce app Using the MongoDB driver and Express created for the exams of the lesson M101JS: MongoDB for Node.js Developers",
-    "main": "app.js",
+    "main": "mongomart.js",
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-       "start": "node mongomart.js"
+    "start": "node mongomart.js"
   },
     "dependencies": {
         "express": "~4.13.3",
