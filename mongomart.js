@@ -23,6 +23,7 @@ var express       = require('express'),
     ItemDAO       = require('./items').ItemDAO,
     PORT          = process.env.PORT || 3000,
     url           = process.env.MONGOLAB_URI,
+    headparser    = require('./headparser.js'),
     CartDAO       = require('./cart').CartDAO;
     
 
