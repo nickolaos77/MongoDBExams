@@ -15,14 +15,15 @@
 */
 
 
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    nunjucks = require('nunjucks'),
-    MongoClient = require('mongodb').MongoClient,
-    assert = require('assert'),
-    ItemDAO = require('./items').ItemDAO,
-    PORT      = process.env.PORT || 3000,
-    CartDAO = require('./cart').CartDAO;
+var express       = require('express'),
+    bodyParser    = require('body-parser'),
+    nunjucks      = require('nunjucks'),
+    MongoClient   = require('mongodb').MongoClient,
+    assert        = require('assert'),
+    ItemDAO       = require('./items').ItemDAO,
+    PORT          = process.env.PORT || 3000,
+    url           = process.env.MONGOLAB_URI,
+    CartDAO       = require('./cart').CartDAO;
     
 
 // Set up express
@@ -52,7 +53,7 @@ var ITEMS_PER_PAGE = 5;
 // Hardcoded USERID for use with the shopping cart portion
 var USERID = "558098a65133816958968d88";
 
-MongoClient.connect('mongodb://localhost:27017/mongomart', function(err, db) {
+MongoClient.connect(url, function(err, db) {
     "use strict";
 
     assert.equal(null, err);
